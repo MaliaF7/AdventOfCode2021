@@ -1,6 +1,5 @@
-#Part One
-
-with open("File1.txt", "r") as f:
+#PART TWO
+with open("input.txt", "r") as f:
     data=f.readlines()
 h = d = 0
 for move in data:
@@ -11,7 +10,21 @@ for move in data:
         d += int(amount)
     else:
         d -= int(amount)
-print(f"Part 1: {h=} and {d=} ==> {h*d}")
+print(h*d)
 
 
+#PART TWO
+with open("input.txt", "r") as f:
+    data=f.readlines()
+h = d = a = 0
+for move in data:
+    direction, amount = move.split(" ")
+    if direction == "forward":
+        h += int(amount)
+        d += int(amount) * a
+    elif direction == "down":
+        a += int(amount)
+    else:
+        a -= int(amount)
+print(h*d)
 
