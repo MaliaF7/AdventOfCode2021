@@ -1,4 +1,4 @@
-#PART TWO
+#PART ONE
 with open("input.txt", "r") as f:
     data=f.readlines()
 h = d = 0
